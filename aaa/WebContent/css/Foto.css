@@ -1,0 +1,16 @@
+
+
+
+.text-wrapper
+{
+	
+	position: relative;
+		
+}
+
+.text-wrapper h1
+{
+	text-align: center;
+	color: green;
+	font-size: 10vw;
+}
