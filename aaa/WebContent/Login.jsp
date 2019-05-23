@@ -8,7 +8,8 @@
 <head>
 	<title>Login Page</title>
    <!--Made with love by Mutiullah Samim -->
-   
+   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 	<!--Bootsrap 4 CDN-->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     
@@ -17,13 +18,48 @@
 
 	<!--Custom styles-->
 	<link rel="stylesheet" type="text/css" href="css/Login.css">
+	
+	
+<!-- 	<script> -->
+<!-- // 	$(document).ready(function() -->
+<!-- // 			{ -->
+<!-- // 	$("#Login").click(function() -->
+<!-- // 			{ -->
+<!-- // 		var conteudo = document.getElementById("txt").value; -->
+<!-- // 		console.log(conteudo); -->
+<!-- // 		$.ajax({ -->
+			
+<!-- // 			type: 'GET', -->
+<!-- // 			url: 'BuscaBD', -->
+<!-- // 					headers: -->
+<!-- // 						{ -->
+<!-- // 							Accept: "application/json;charset=utf-8", -->
+<!-- // 							"Content-Type": "application/json; charset=utf-8" -->
+<!-- // 						}, -->
+<!-- // 						success: function(result) -->
+<!-- // 						{ -->
+<!-- // 							console.log(result); -->
+<!-- // 							console.log(result.id); -->
+<!-- // 							var produto = $.parseJSON(result); -->
+<!-- // 							console.log(produto); -->
+							
+							
+<!-- // 						} -->
+<!-- // 		}); -->
+<!-- // 	}); -->
+<!-- // } -->
+<!-- // 	); -->
+	
+<!-- 	</script> -->
+	
+	
 </head>
 <body>
 <div class="container">
 	<div class="d-flex justify-content-center h-100">
 		<div class="card">
 			<div class="card-header">
-				<h3>Sign In</h3>
+				<h3>Entrar</h3>
 				
 			</div>
 			<div class="card-body">
@@ -32,20 +68,15 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
-						<input type="text" class="form-control" placeholder="username" name="userName"
+						<input id="txt"type="text" class="form-control" placeholder="Login" name="userName"
 						>
 						
 					</div>
 					
-					<div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-key"></i></span>
-						</div>
-						<input type="password" class="form-control" placeholder="password" name="fullName">
-					</div>
+					
 					
 					<div class="form-group">
-						<a href="SiteCompra.jsp" class="btn btn-primary stretched-link">Login</a>
+						<a id="Login" href="SiteCompra.jsp" class="btn btn-primary stretched-link">Login</a>
 					</div>
 					
 				</form>

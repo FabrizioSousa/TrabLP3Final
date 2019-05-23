@@ -24,9 +24,9 @@ public class ConexaoBD {
 	             // String url = "jdbc:sqlserver://DESKTOP-SR8G8GB\\SQLEXPRESS;databaseName=AULADB;integratedSecurity=true";
 	                
 	              String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-	                String url = "jdbc:sqlserver://DESKTOP-SR8G8GB\\SQLEXPRESS;databaseName=AULADB";
+	                String url = "jdbc:sqlserver://DESKTOP-SR8G8GB\\LOCALHOST;databaseName=LP3";
 	                String user = "sa";
-	                String password = "palmeiras";
+	                String password = "123456";
 	                Class.forName(driver);
 	                connection = DriverManager.getConnection(url, user, password);
 	            	//  "Data Source=DESKTOP-SR8G8GB\SQLEXPRESS;Initial Catalog=AULADB;integrated Security = true";

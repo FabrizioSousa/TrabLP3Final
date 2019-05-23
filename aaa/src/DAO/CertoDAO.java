@@ -28,6 +28,7 @@ import com.google.gson.JsonObject;
 import org.json.simple.JSONObject;
 
 public class CertoDAO {
+	@SuppressWarnings("unchecked")
 	public static List<JSONObject> convertToJSON(ResultSet rs)
             throws Exception {
        List<JSONObject> lista = new ArrayList<JSONObject>();
@@ -73,18 +74,28 @@ public class CertoDAO {
 	{
 		ResultSet rs = null;
     	Connection connection= null;
-    	try {
-    	try {
-			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-		} catch (ClassNotFoundException e) {
+//    	try {
+//    	try {
+//			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+//		} catch (ClassNotFoundException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//    	String url = "jdbc:sqlserver://DESKTOP-SR8G8GB\\SQLEXPRESS;databaseName=AULADB";
+//
+//    	String user = "sa";
+//    	String password = "palmeiras";
+//    	connection = DriverManager.getConnection(url, user, password);
+    	try
+    	{
+		
+		try {
+			connection = ConexaoBD.getConnection();
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-    	String url = "jdbc:sqlserver://DESKTOP-SR8G8GB\\SQLEXPRESS;databaseName=AULADB";
-    	String user = "sa";
-    	String password = "palmeiras";
-    	connection = DriverManager.getConnection(url, user, password);
-    	String SPsql = "select  top 6 * from auladb.dbo.produto";
+    	String SPsql = "select top 6 * from LP3.dbo.Produtos";
     		PreparedStatement preparedStatement = connection.prepareStatement(SPsql);
     		rs = preparedStatement.executeQuery();
     		return rs;
@@ -96,9 +107,9 @@ public class CertoDAO {
 	}
 	public List<JSONObject> getJsonObject()
 	{
-//		ResultSet rs = 
-		ResultSet rs = PegaRs();
 		 try {
+		ResultSet rs = PegaRs();
+		
 			List<JSONObject> rsLista = convertToJSON(rs);
 			return rsLista;
 		} catch (Exception e) {

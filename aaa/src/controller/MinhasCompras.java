@@ -27,14 +27,14 @@ import DAO.CertoDAO;
 /**
  * Servlet implementation class WelcomeServlet
  */
-@WebServlet("/BuscaBD")
-public class WelcomeServlet extends HttpServlet {
+@WebServlet("/BuscaBDCompras")
+public class MinhasCompras extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public WelcomeServlet() {
+    public MinhasCompras() {
         super();
         // TODO Auto-generated constructor stub
     }

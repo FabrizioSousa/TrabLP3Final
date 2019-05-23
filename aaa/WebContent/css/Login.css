@@ -16,7 +16,7 @@ align-content: center;
 }
 
 .card{
-height: 300px;
+height: 200px;
 margin-top: auto;
 margin-bottom: auto;
 width: 400px;
@@ -87,3 +87,4 @@ color: white;
 .links a{
 margin-left: 4px;
 }
+
